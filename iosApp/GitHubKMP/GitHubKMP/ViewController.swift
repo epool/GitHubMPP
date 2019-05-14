@@ -7,21 +7,22 @@
 //
 
 import UIKit
+import SDWebImage
 import shared
 
 class ViewController: UIViewController, MembersView {
-    
+
     let memberList = MemberList()
 
     lazy var presenter: MembersPresenter = {
         MembersPresenter(view: self, repository: AppDelegate.appDelegate.dataRepository)
     }()
-    
+
     var isUpdating = false
 
     @IBOutlet weak var greeting: UILabel!
     @IBOutlet weak var membersTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,32 +47,17 @@ class ViewController: UIViewController, MembersView {
 }
 
 extension ViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.memberList.members.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCellTableViewCell
         let member = self.memberList.members[indexPath.row]
         cell.memberLogin.text = member.login
-        cell.memberAvatar.load(url: URL(string: member.avatarUrl)!)
+        cell.memberAvatar?.sd_setImage(with: URL(string: member.avatarUrl), placeholderImage: nil)
         return cell
     }
 
-}
-
-extension UIImageView {
-    func load(url: URL) {
-        self.image = nil
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
 }

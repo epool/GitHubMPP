@@ -18,6 +18,7 @@
 		6AFA8F04227A6D9100BB9057 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA8F03227A6D9100BB9057 /* MemberList.swift */; };
 		6AFA8F06227A708600BB9057 /* MemberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA8F05227A708600BB9057 /* MemberCellTableViewCell.swift */; };
 		6AFA8F08227A710600BB9057 /* MemberCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA8F07227A710600BB9057 /* MemberCellTableViewCell.xib */; };
+		85BC1A1AB0E8BABB351028CE /* libPods-GitHubKMP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6D93DF967966C7C32238C9 /* libPods-GitHubKMP.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F6D93DF967966C7C32238C9 /* libPods-GitHubKMP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHubKMP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB9BB4E9B646228B2CB1E0A /* Pods-GitHubKMP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubKMP.debug.xcconfig"; path = "Target Support Files/Pods-GitHubKMP/Pods-GitHubKMP.debug.xcconfig"; sourceTree = "<group>"; };
 		6AC7831D227971F40089B509 /* GitHubKMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubKMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC78320227971F40089B509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC78322227971F40089B509 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		6AFA8F03227A6D9100BB9057 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
 		6AFA8F05227A708600BB9057 /* MemberCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellTableViewCell.swift; sourceTree = "<group>"; };
 		6AFA8F07227A710600BB9057 /* MemberCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCellTableViewCell.xib; sourceTree = "<group>"; };
+		DBF7F21866FCD28AD8D6F01A /* Pods-GitHubKMP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubKMP.release.xcconfig"; path = "Target Support Files/Pods-GitHubKMP/Pods-GitHubKMP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,18 +59,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC78333227974830089B509 /* shared.framework in Frameworks */,
+				85BC1A1AB0E8BABB351028CE /* libPods-GitHubKMP.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		39608A3D3F0CE06FBBCAB811 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F6D93DF967966C7C32238C9 /* libPods-GitHubKMP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6AC78314227971F40089B509 = {
 			isa = PBXGroup;
 			children = (
 				6AC78332227974830089B509 /* shared.framework */,
 				6AC7831F227971F40089B509 /* GitHubKMP */,
 				6AC7831E227971F40089B509 /* Products */,
+				7267C31D2454EAF28C48D9BB /* Pods */,
+				39608A3D3F0CE06FBBCAB811 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +110,16 @@
 			path = GitHubKMP;
 			sourceTree = "<group>";
 		};
+		7267C31D2454EAF28C48D9BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CB9BB4E9B646228B2CB1E0A /* Pods-GitHubKMP.debug.xcconfig */,
+				DBF7F21866FCD28AD8D6F01A /* Pods-GitHubKMP.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +127,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AC7832F227971F50089B509 /* Build configuration list for PBXNativeTarget "GitHubKMP" */;
 			buildPhases = (
+				39574EABD58C4AA6C6C89D29 /* [CP] Check Pods Manifest.lock */,
 				6AC78336227975660089B509 /* ShellScript */,
 				6AC78319227971F40089B509 /* Sources */,
 				6AC7831A227971F40089B509 /* Frameworks */,
@@ -165,6 +191,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		39574EABD58C4AA6C6C89D29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitHubKMP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6AC78336227975660089B509 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +385,7 @@
 		};
 		6AC78330227971F50089B509 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB9BB4E9B646228B2CB1E0A /* Pods-GitHubKMP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -357,6 +406,7 @@
 		};
 		6AC78331227971F50089B509 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBF7F21866FCD28AD8D6F01A /* Pods-GitHubKMP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

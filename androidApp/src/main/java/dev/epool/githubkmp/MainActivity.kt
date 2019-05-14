@@ -48,7 +48,9 @@ class MainActivity : AppCompatActivity(), MembersView {
             is UpdateProblem -> getString(R.string.update_problem)
             else -> "Unknown error."
         }
-        Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+        runOnUiThread {
+            Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun setupRecyclerView() {

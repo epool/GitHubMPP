@@ -15,7 +15,6 @@
 		6AC78333227974830089B509 /* shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC78332227974830089B509 /* shared.framework */; };
 		6AC78334227974830089B509 /* shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC78332227974830089B509 /* shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6AFA8F02227A566700BB9057 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA8F01227A566700BB9057 /* BaseView.swift */; };
-		6AFA8F04227A6D9100BB9057 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA8F03227A6D9100BB9057 /* MemberList.swift */; };
 		6AFA8F06227A708600BB9057 /* MemberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFA8F05227A708600BB9057 /* MemberCellTableViewCell.swift */; };
 		6AFA8F08227A710600BB9057 /* MemberCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA8F07227A710600BB9057 /* MemberCellTableViewCell.xib */; };
 		85BC1A1AB0E8BABB351028CE /* libPods-GitHubKMP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6D93DF967966C7C32238C9 /* libPods-GitHubKMP.a */; };
@@ -47,7 +46,6 @@
 		6AC7832C227971F50089B509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AC78332227974830089B509 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = "../../shared/build/xcode-frameworks/shared.framework"; sourceTree = "<group>"; };
 		6AFA8F01227A566700BB9057 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		6AFA8F03227A6D9100BB9057 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
 		6AFA8F05227A708600BB9057 /* MemberCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellTableViewCell.swift; sourceTree = "<group>"; };
 		6AFA8F07227A710600BB9057 /* MemberCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCellTableViewCell.xib; sourceTree = "<group>"; };
 		DBF7F21866FCD28AD8D6F01A /* Pods-GitHubKMP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubKMP.release.xcconfig"; path = "Target Support Files/Pods-GitHubKMP/Pods-GitHubKMP.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				6AC78329227971F50089B509 /* LaunchScreen.storyboard */,
 				6AC7832C227971F50089B509 /* Info.plist */,
 				6AFA8F01227A566700BB9057 /* BaseView.swift */,
-				6AFA8F03227A6D9100BB9057 /* MemberList.swift */,
 				6AFA8F05227A708600BB9057 /* MemberCellTableViewCell.swift */,
 				6AFA8F07227A710600BB9057 /* MemberCellTableViewCell.xib */,
 			);
@@ -116,7 +113,6 @@
 				3CB9BB4E9B646228B2CB1E0A /* Pods-GitHubKMP.debug.xcconfig */,
 				DBF7F21866FCD28AD8D6F01A /* Pods-GitHubKMP.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -241,7 +237,6 @@
 				6AC78323227971F40089B509 /* ViewController.swift in Sources */,
 				6AFA8F06227A708600BB9057 /* MemberCellTableViewCell.swift in Sources */,
 				6AC78321227971F40089B509 /* AppDelegate.swift in Sources */,
-				6AFA8F04227A6D9100BB9057 /* MemberList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

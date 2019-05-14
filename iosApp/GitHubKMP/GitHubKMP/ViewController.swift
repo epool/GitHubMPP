@@ -12,7 +12,7 @@ import shared
 
 class ViewController: UIViewController, MembersView {
 
-    let memberList = MemberList()
+    var members: [Member] = []
 
     lazy var presenter: MembersPresenter = {
         MembersPresenter(view: self, repository: AppDelegate.appDelegate.dataRepository)
@@ -40,7 +40,8 @@ class ViewController: UIViewController, MembersView {
     }
 
     func onUpdate(members: [Member]) {
-        self.memberList.updateMembers(members)
+        self.members.removeAll()
+        self.members.append(contentsOf: members)
         self.membersTableView.reloadData()
     }
 
@@ -49,12 +50,12 @@ class ViewController: UIViewController, MembersView {
 extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.memberList.members.count
+        return self.members.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCellTableViewCell
-        let member = self.memberList.members[indexPath.row]
+        let member = self.members[indexPath.row]
         cell.memberLogin.text = member.login
         cell.memberAvatar?.sd_setImage(with: URL(string: member.avatarUrl), placeholderImage: nil)
         return cell

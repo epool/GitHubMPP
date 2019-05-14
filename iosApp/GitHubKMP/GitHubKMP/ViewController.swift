@@ -55,9 +55,7 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemberCell", for: indexPath) as! MemberCellTableViewCell
-        let member = self.members[indexPath.row]
-        cell.memberLogin.text = member.login
-        cell.memberAvatar?.sd_setImage(with: URL(string: member.avatarUrl), placeholderImage: nil)
+        cell.bind(member: self.members[indexPath.row])
         return cell
     }
 
